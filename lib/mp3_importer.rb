@@ -1,4 +1,5 @@
 class MP3Importer
+  require 'pry'
   attr_accessor :path
   
   def initialize(path)
@@ -7,6 +8,7 @@ class MP3Importer
 
   def files
     files_names = Dir.glob("#{path}/*.mp3")
+    binding.pry
   end
   
 end
